@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html LANG="en">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <title>{% block page_title %}Mozilla India{% endblock %}</title>
+
+    {% block site_css %}
+      {% compress css %}
+      <link href="{{ static('mainsite/css/main.css') }}" rel="stylesheet">
+      {% endcompress %}
+      <link href="//mozorg.cdn.mozilla.net/media/css/tabzilla-min.css" rel="stylesheet" />
+    {% endblock %}
+  </head>
+  <body data-mobile-cookie="{{ settings.MOBILE_COOKIE }}">
+    <header id="masthead">
+      <a href="https://www.mozilla.org/" id="tabzilla">mozilla</a>
+    </header>
+    <div id="outer-wrapper">
+        <div id="wrapper">
+          {% block content %}{% endblock %}
+
+        <div id="footer">
+          {# These links will add/remove cookies. See JavaScript. #}
+          <a class="desktop-link" href="">{{ _('View Desktop Site') }}</a>
+          &nbsp;|&nbsp;
+          <a class="mobile-link" href="">{{ _('View Mobile Site') }}</a>
+        </div>
+
+        {% block site_js %}
+          {% compress js %}
+          <script src="{{ static('mainsite/js/libs/jquery-1.4.4.min.js') }}"></script>
+          <script src="{{ static('mainsite/js/libs/jquery.cookie.js') }}"></script>
+          <script src="{{ static('mainsite/js/init.js') }}"></script>
+          {% endcompress %}
+          <script src="//mozorg.cdn.mozilla.net/tabzilla/tabzilla.js"></script>
+        {% endblock %}
+        </div>
+    </div>
+  </body>
+</html>
