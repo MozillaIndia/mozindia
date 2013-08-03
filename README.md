@@ -37,7 +37,7 @@ Now you need to actually create a database. Do
 
     $ mysql -u root -p
 
-If you have a password for the *MySQL* root user(**not** the UNIX root),
+If you have a password for the *MySQL* root user(not the UNIX root),
 else just:
 
     $ mysql -u root
@@ -148,6 +148,10 @@ request.
 mozindia is proudly a [Playdoh][gh-playdoh] project. Refer to the Playdoh
 docs [here][docs].
 
+Discussions can take place in the Mozilla India mailing list([join][mozindia-mailman])
+and on IRC(`#india`@irc.mozilla.org).
+
+
 ## License
 This software is licensed under the [New BSD License][BSD]. For more
 information, read the file ``LICENSE``.
@@ -155,4 +159,4 @@ information, read the file ``LICENSE``.
 [gh-playdoh]: https://github.com/mozilla/playdoh
 [docs]: http://playdoh.rtfd.org/
 [BSD]: http://creativecommons.org/licenses/BSD/
-
+[mozindia-mailman]: https://lists.mozilla.org/listinfo/community-india
