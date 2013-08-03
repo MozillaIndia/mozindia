@@ -151,8 +151,10 @@ locally, then save some bandwidth by
 - Running the following commands(change the `username` bit to your Github
   username):
 
+
     $ git remote rename origin upstream
     $ git remote add origin https://github.com/username/mozindia.git
+
 
 Now all the pushes to origin will be to your fork, and you can pull all the
 changes upstream by
