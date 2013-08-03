@@ -15,8 +15,7 @@ ROOT_URLCONF = '%s.urls' % PROJECT_MODULE
 INSTALLED_APPS = list(INSTALLED_APPS) + [
     # Application base, containing global templates.
     '%s.base' % PROJECT_MODULE,
-    # Example code. Can (and should) be removed for actual projects.
-    '%s.examples' % PROJECT_MODULE,
+    '{}.mainsite'.format(PROJECT_MODULE),
 ]
 
 # Note! If you intend to add `south` to INSTALLED_APPS,
