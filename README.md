@@ -42,13 +42,13 @@ else just:
 
     $ mysql -u root
 
-At the mysql prompt, type this IF you want to create a MySQL user:
+At the mysql prompt, type this *if* you want to create a MySQL user:
 
     mysql> create user 'mozindia'@'localhost' identified by 'password_here';
 
-**Note:** *Please make sure the user/password you created here is the same as 
+**Note:** Please make sure the user/password you created here is the same as 
 the one present in the settings(local.py) file discussed in the previous
-section*.
+section.
 
 Then assuming both the username and database name are called 'mozindia',
 
@@ -107,8 +107,7 @@ just created. So run (from the root mozindia directory)
 
     (mozindia)$ pip install -r requirements/compiled.txt 
 
-The output of this command, when it finishes, should **end** with something
-like
+The output of this command, when it finishes, should end with something like
     
     Successfully installed MySQL-python Jinja2 py-bcrypt
     Cleaning up...
@@ -145,12 +144,28 @@ Patches are welcome! Fork this repo, perform the exact above steps with the
 repo URL changed to the URL of your fork, hack and send an awesome pull
 request.
 
-mozindia is proudly a [Playdoh][gh-playdoh] project. Refer to the Playdoh
+If you have already cloned this repo and have successfully run mozindia
+locally, then save some bandwidth by 
+
+- Forking the repo on github
+- Running the following commands(change the `username` bit to your Github
+  username):
+
+    $ git remote rename origin upstream
+    $ git remote add origin https://github.com/username/mozindia.git
+
+Now all the pushes to origin will be to your fork, and you can pull all the
+changes upstream by
+
+    $ git fetch upstream
+
+Mozindia is proudly a [Playdoh][gh-playdoh] project. Refer to the Playdoh
 docs [here][docs].
 
 Discussions can take place in the Mozilla India mailing list([join][mozindia-mailman])
 and on IRC(`#india`@irc.mozilla.org).
 
+Happy hacking!
 
 ## License
 This software is licensed under the [New BSD License][BSD]. For more
